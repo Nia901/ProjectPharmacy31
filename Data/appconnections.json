@@ -1,0 +1,6 @@
+﻿{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=DESKTOP-R1O02PQ\\SQLEXPRESS01;Database=PharmacyDB160;Trusted_Connection=True;TrustServerCertificate=True"
+  }
+    
+}
