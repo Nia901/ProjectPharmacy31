@@ -36,48 +36,55 @@
             button2 = new Button();
             dataGridView1 = new DataGridView();
             button3 = new Button();
+            groupBox1 = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(208, 115);
+            label1.Location = new Point(82, 69);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(56, 20);
+            label1.Size = new Size(80, 33);
             label1.TabIndex = 0;
             label1.Text = "Имейл";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(412, 108);
+            textBox1.Location = new Point(405, 66);
+            textBox1.Margin = new Padding(4, 5, 4, 5);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(246, 27);
+            textBox1.Size = new Size(367, 36);
             textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(412, 173);
+            textBox2.Location = new Point(405, 153);
+            textBox2.Margin = new Padding(4, 5, 4, 5);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(246, 27);
+            textBox2.Size = new Size(367, 36);
             textBox2.TabIndex = 2;
             textBox2.Visible = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(208, 180);
+            label2.Location = new Point(82, 156);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(62, 20);
+            label2.Size = new Size(86, 33);
             label2.TabIndex = 3;
             label2.Text = "Парола";
             label2.Visible = false;
             // 
             // button1
             // 
-            button1.Location = new Point(107, 330);
+            button1.Location = new Point(78, 634);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(175, 54);
+            button1.Size = new Size(262, 89);
             button1.TabIndex = 4;
             button1.Text = "Изтрий";
             button1.UseVisualStyleBackColor = true;
@@ -86,9 +93,10 @@
             // 
             // button2
             // 
-            button2.Location = new Point(502, 330);
+            button2.Location = new Point(903, 634);
+            button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
-            button2.Size = new Size(175, 54);
+            button2.Size = new Size(262, 89);
             button2.TabIndex = 5;
             button2.Text = "Търси";
             button2.UseVisualStyleBackColor = true;
@@ -98,44 +106,63 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(26, 237);
+            dataGridView1.Location = new Point(36, 383);
+            dataGridView1.Margin = new Padding(4, 5, 4, 5);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(753, 52);
+            dataGridView1.Size = new Size(1130, 127);
             dataGridView1.TabIndex = 6;
             dataGridView1.Visible = false;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // button3
             // 
-            button3.Location = new Point(52, 12);
+            button3.Location = new Point(518, 634);
+            button3.Margin = new Padding(4, 5, 4, 5);
             button3.Name = "button3";
-            button3.Size = new Size(135, 54);
+            button3.Size = new Size(202, 89);
             button3.TabIndex = 7;
             button3.Text = "Отказ";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.AliceBlue;
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Location = new Point(178, 79);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(812, 251);
+            groupBox1.TabIndex = 8;
+            groupBox1.TabStop = false;
+            // 
             // Form8
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = Color.Navy;
+            BackgroundImage = Properties.Resources.stethoscope_placed_on_a_blue_surface_a_stethoscope_rests_on_a_blue_surface_showcasing_its_metallic_components_and_soft_tubing_ideal_for_medical_use_photo;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1200, 742);
+            Controls.Add(groupBox1);
             Controls.Add(button3);
             Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(label2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            Font = new Font("Sitka Banner Semibold", 13.7999992F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form8";
-            Text = "Search/Remove Customer";
+            Text = "Search Customer";
             FormClosed += Form8_FormClosed;
             Load += Form8_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -148,5 +175,6 @@
         private Button button2;
         private DataGridView dataGridView1;
         private Button button3;
+        private GroupBox groupBox1;
     }
 }

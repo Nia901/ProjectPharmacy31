@@ -40,62 +40,70 @@
             label5 = new Label();
             textBox3 = new TextBox();
             textBox4 = new TextBox();
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(68, 183);
+            label1.Location = new Point(102, 302);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(39, 20);
+            label1.Size = new Size(56, 33);
             label1.TabIndex = 0;
             label1.Text = "Име";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(68, 236);
+            label2.Location = new Point(102, 389);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(73, 20);
+            label2.Size = new Size(104, 33);
             label2.TabIndex = 1;
             label2.Text = "Фамилия";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(68, 293);
+            label3.Location = new Point(102, 483);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(174, 20);
+            label3.Size = new Size(242, 33);
             label3.TabIndex = 2;
             label3.Text = "Професионална област";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(515, 176);
+            textBox1.Location = new Point(772, 290);
+            textBox1.Margin = new Padding(4, 5, 4, 5);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(216, 27);
+            textBox1.Size = new Size(322, 36);
             textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(515, 229);
+            textBox2.Location = new Point(772, 378);
+            textBox2.Margin = new Padding(4, 5, 4, 5);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(216, 27);
+            textBox2.Size = new Size(322, 36);
             textBox2.TabIndex = 4;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(515, 285);
+            comboBox1.Location = new Point(772, 470);
+            comboBox1.Margin = new Padding(4, 5, 4, 5);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(216, 28);
+            comboBox1.Size = new Size(322, 41);
             comboBox1.TabIndex = 5;
             // 
             // button1
             // 
-            button1.Location = new Point(515, 356);
+            button1.Location = new Point(772, 587);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(172, 63);
+            button1.Size = new Size(258, 104);
             button1.TabIndex = 6;
             button1.Text = "Регистрирай се";
             button1.UseVisualStyleBackColor = true;
@@ -103,9 +111,10 @@
             // 
             // button2
             // 
-            button2.Location = new Point(121, 356);
+            button2.Location = new Point(182, 587);
+            button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
-            button2.Size = new Size(172, 63);
+            button2.Size = new Size(258, 104);
             button2.TabIndex = 7;
             button2.Text = "Отказ";
             button2.UseVisualStyleBackColor = true;
@@ -114,40 +123,54 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(68, 137);
+            label4.Location = new Point(102, 226);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(62, 20);
+            label4.Size = new Size(86, 33);
             label4.TabIndex = 8;
             label4.Text = "Парола";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(68, 80);
+            label5.Location = new Point(102, 132);
+            label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
-            label5.Size = new Size(147, 20);
+            label5.Size = new Size(214, 33);
             label5.TabIndex = 9;
             label5.Text = "Потребителско име";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(515, 73);
+            textBox3.Location = new Point(772, 120);
+            textBox3.Margin = new Padding(4, 5, 4, 5);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(216, 27);
+            textBox3.Size = new Size(322, 36);
             textBox3.TabIndex = 10;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(515, 130);
+            textBox4.Location = new Point(772, 214);
+            textBox4.Margin = new Padding(4, 5, 4, 5);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(216, 27);
+            textBox4.Size = new Size(322, 36);
             textBox4.TabIndex = 11;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Teal;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1204, 63);
+            panel1.TabIndex = 12;
             // 
             // Form4
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 33F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = Properties.Resources.Untitled;
+            ClientSize = new Size(1200, 742);
+            Controls.Add(panel1);
             Controls.Add(textBox4);
             Controls.Add(textBox3);
             Controls.Add(label5);
@@ -160,6 +183,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Font = new Font("Sitka Banner Semibold", 13.7999992F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form4";
             Text = "Specialists Registration";
             FormClosed += Form4_FormClosed;
@@ -182,5 +208,6 @@
         private Label label5;
         private TextBox textBox3;
         private TextBox textBox4;
+        private Panel panel1;
     }
 }

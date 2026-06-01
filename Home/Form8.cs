@@ -56,6 +56,7 @@ namespace Home
             {
                 await customerController.RemoveCustomer(email, password);
                 MessageBox.Show("Успешно изтрихте клиент!");
+                DialogResult=DialogResult.OK;
             }
             catch (Exception ex)
             {

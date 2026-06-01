@@ -73,9 +73,9 @@
             // button1
             // 
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(-16, 409);
+            button1.Location = new Point(-16, 520);
             button1.Name = "button1";
-            button1.Size = new Size(278, 29);
+            button1.Size = new Size(278, 46);
             button1.TabIndex = 0;
             button1.Text = "Отказ";
             button1.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.PaleGreen;
+            panel1.BackColor = Color.CadetBlue;
             panel1.Controls.Add(button7);
             panel1.Controls.Add(button6);
             panel1.Controls.Add(button5);
@@ -91,17 +91,19 @@
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
+            panel1.Font = new Font("Sitka Banner Semibold", 13.7999992F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(250, 451);
+            panel1.Size = new Size(263, 579);
             panel1.TabIndex = 1;
+            panel1.Paint += panel1_Paint;
             // 
             // button7
             // 
             button7.FlatStyle = FlatStyle.Flat;
-            button7.Location = new Point(-16, 199);
+            button7.Location = new Point(-16, 165);
             button7.Name = "button7";
-            button7.Size = new Size(278, 29);
+            button7.Size = new Size(278, 47);
             button7.TabIndex = 0;
             button7.Text = "Изтрий своя акаунт";
             button7.UseVisualStyleBackColor = true;
@@ -110,9 +112,9 @@
             // button6
             // 
             button6.FlatStyle = FlatStyle.Flat;
-            button6.Location = new Point(-16, 234);
+            button6.Location = new Point(-16, 218);
             button6.Name = "button6";
-            button6.Size = new Size(278, 29);
+            button6.Size = new Size(278, 57);
             button6.TabIndex = 5;
             button6.Text = "Специалисти";
             button6.UseVisualStyleBackColor = true;
@@ -121,9 +123,9 @@
             // button5
             // 
             button5.FlatStyle = FlatStyle.Flat;
-            button5.Location = new Point(-16, 269);
+            button5.Location = new Point(-16, 281);
             button5.Name = "button5";
-            button5.Size = new Size(278, 29);
+            button5.Size = new Size(278, 58);
             button5.TabIndex = 4;
             button5.Text = "Поръчки";
             button5.UseVisualStyleBackColor = true;
@@ -132,9 +134,9 @@
             // button4
             // 
             button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(-16, 304);
+            button4.Location = new Point(-16, 345);
             button4.Name = "button4";
-            button4.Size = new Size(278, 29);
+            button4.Size = new Size(278, 52);
             button4.TabIndex = 3;
             button4.Text = "Продукти";
             button4.UseVisualStyleBackColor = true;
@@ -143,9 +145,9 @@
             // button3
             // 
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(-16, 339);
+            button3.Location = new Point(-16, 403);
             button3.Name = "button3";
-            button3.Size = new Size(278, 29);
+            button3.Size = new Size(278, 53);
             button3.TabIndex = 2;
             button3.Text = "Клиенти";
             button3.UseVisualStyleBackColor = true;
@@ -154,9 +156,9 @@
             // button2
             // 
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(-16, 374);
+            button2.Location = new Point(-16, 462);
             button2.Name = "button2";
-            button2.Size = new Size(278, 29);
+            button2.Size = new Size(278, 52);
             button2.TabIndex = 1;
             button2.Text = "Администратори";
             button2.UseVisualStyleBackColor = true;
@@ -169,20 +171,22 @@
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Controls.Add(tabPage4);
             tabControl1.Controls.Add(tabPage5);
-            tabControl1.Location = new Point(248, 0);
+            tabControl1.Font = new Font("Sitka Banner Semibold", 13.7999992F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            tabControl1.Location = new Point(247, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(554, 451);
+            tabControl1.Size = new Size(741, 579);
             tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
+            tabPage1.BackgroundImage = Properties.Resources.images1;
             tabPage1.Controls.Add(dataGridView1);
             tabPage1.Controls.Add(button8);
-            tabPage1.Location = new Point(4, 29);
+            tabPage1.Location = new Point(4, 42);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(546, 418);
+            tabPage1.Size = new Size(738, 533);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Admins";
             tabPage1.UseVisualStyleBackColor = true;
@@ -191,15 +195,15 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(33, 25);
+            dataGridView1.Location = new Point(87, 47);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(488, 257);
+            dataGridView1.Size = new Size(577, 257);
             dataGridView1.TabIndex = 1;
             // 
             // button8
             // 
-            button8.Location = new Point(152, 329);
+            button8.Location = new Point(263, 389);
             button8.Name = "button8";
             button8.Size = new Size(255, 45);
             button8.TabIndex = 0;
@@ -209,30 +213,32 @@
             // 
             // tabPage2
             // 
+            tabPage2.BackgroundImage = Properties.Resources.images1;
             tabPage2.Controls.Add(button11);
             tabPage2.Controls.Add(button10);
             tabPage2.Controls.Add(button9);
             tabPage2.Controls.Add(dataGridView2);
-            tabPage2.Location = new Point(4, 29);
+            tabPage2.Location = new Point(4, 42);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(546, 418);
+            tabPage2.Size = new Size(738, 533);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Customers";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            button11.Location = new Point(290, 352);
+            button11.Location = new Point(515, 397);
             button11.Name = "button11";
             button11.Size = new Size(185, 43);
             button11.TabIndex = 3;
             button11.Text = "Изтрий клиент";
             button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
             // 
             // button10
             // 
-            button10.Location = new Point(290, 296);
+            button10.Location = new Point(293, 397);
             button10.Name = "button10";
             button10.Size = new Size(185, 43);
             button10.TabIndex = 2;
@@ -242,7 +248,7 @@
             // 
             // button9
             // 
-            button9.Location = new Point(53, 352);
+            button9.Location = new Point(61, 397);
             button9.Name = "button9";
             button9.Size = new Size(185, 43);
             button9.TabIndex = 1;
@@ -253,7 +259,7 @@
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(31, 22);
+            dataGridView2.Location = new Point(150, 75);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
             dataGridView2.Size = new Size(487, 262);
@@ -261,14 +267,15 @@
             // 
             // tabPage3
             // 
+            tabPage3.BackgroundImage = Properties.Resources.images1;
             tabPage3.Controls.Add(dataGridView3);
             tabPage3.Controls.Add(button14);
             tabPage3.Controls.Add(button13);
             tabPage3.Controls.Add(button12);
-            tabPage3.Location = new Point(4, 29);
+            tabPage3.Location = new Point(4, 42);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(546, 418);
+            tabPage3.Size = new Size(738, 533);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Products";
             tabPage3.UseVisualStyleBackColor = true;
@@ -276,7 +283,7 @@
             // dataGridView3
             // 
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(26, 15);
+            dataGridView3.Location = new Point(157, 80);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 51;
             dataGridView3.Size = new Size(493, 245);
@@ -284,7 +291,7 @@
             // 
             // button14
             // 
-            button14.Location = new Point(382, 322);
+            button14.Location = new Point(514, 390);
             button14.Name = "button14";
             button14.Size = new Size(154, 52);
             button14.TabIndex = 2;
@@ -294,18 +301,17 @@
             // 
             // button13
             // 
-            button13.Location = new Point(205, 322);
+            button13.Location = new Point(315, 390);
             button13.Name = "button13";
             button13.Size = new Size(154, 52);
             button13.TabIndex = 1;
             button13.Text = "Изведи всички продукти";
             button13.UseVisualStyleBackColor = true;
-            button13.Visible = false;
             button13.Click += button13_Click;
             // 
             // button12
             // 
-            button12.Location = new Point(26, 322);
+            button12.Location = new Point(123, 390);
             button12.Name = "button12";
             button12.Size = new Size(154, 52);
             button12.TabIndex = 0;
@@ -315,19 +321,20 @@
             // 
             // tabPage4
             // 
+            tabPage4.BackgroundImage = Properties.Resources.images1;
             tabPage4.Controls.Add(button15);
             tabPage4.Controls.Add(dataGridView4);
-            tabPage4.Location = new Point(4, 29);
+            tabPage4.Location = new Point(4, 42);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(546, 418);
+            tabPage4.Size = new Size(738, 533);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Orders";
             tabPage4.UseVisualStyleBackColor = true;
             // 
             // button15
             // 
-            button15.Location = new Point(208, 320);
+            button15.Location = new Point(333, 420);
             button15.Name = "button15";
             button15.Size = new Size(148, 54);
             button15.TabIndex = 1;
@@ -338,7 +345,7 @@
             // dataGridView4
             // 
             dataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView4.Location = new Point(28, 23);
+            dataGridView4.Location = new Point(150, 86);
             dataGridView4.Name = "dataGridView4";
             dataGridView4.RowHeadersWidth = 51;
             dataGridView4.Size = new Size(490, 269);
@@ -346,19 +353,20 @@
             // 
             // tabPage5
             // 
+            tabPage5.BackgroundImage = Properties.Resources.images1;
             tabPage5.Controls.Add(button16);
             tabPage5.Controls.Add(dataGridView5);
-            tabPage5.Location = new Point(4, 29);
+            tabPage5.Location = new Point(4, 42);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(546, 418);
+            tabPage5.Size = new Size(733, 533);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Specialists";
             tabPage5.UseVisualStyleBackColor = true;
             // 
             // button16
             // 
-            button16.Location = new Point(215, 332);
+            button16.Location = new Point(324, 436);
             button16.Name = "button16";
             button16.Size = new Size(168, 54);
             button16.TabIndex = 1;
@@ -369,7 +377,7 @@
             // dataGridView5
             // 
             dataGridView5.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView5.Location = new Point(16, 21);
+            dataGridView5.Location = new Point(114, 97);
             dataGridView5.Name = "dataGridView5";
             dataGridView5.RowHeadersWidth = 51;
             dataGridView5.Size = new Size(520, 273);
@@ -379,7 +387,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(988, 578);
             Controls.Add(tabControl1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;

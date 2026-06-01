@@ -1,4 +1,5 @@
 ﻿using Controller;
+using Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,10 +54,35 @@ namespace Home
         private async void button2_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
+            dataGridView1.Columns.Clear();
+            dataGridView1.Rows.Clear();
             dataGridView1.DataSource = await questionsController.GetAllBySpec(Username, Password);
             dataGridView1.Visible = true;
+            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
+            dataGridView1.CellFormatting += dataGridView1_CellFormatting2;
         }
-
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Customer" && e.Value != null)
+            {
+                if (e.Value is Customer categoryObject)
+                {
+                    e.Value = categoryObject.Username;
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+        private void dataGridView1_CellFormatting2(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "Specialist" && e.Value != null)
+            {
+                if (e.Value is Specialists categoryObject)
+                {
+                    e.Value = categoryObject.Username;
+                    e.FormattingApplied = true;
+                }
+            }
+        }
         private void Form7_FormClosed(object sender, FormClosedEventArgs e)
         {
             //Application.Exit();

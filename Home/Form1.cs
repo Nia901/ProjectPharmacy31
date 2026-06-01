@@ -31,12 +31,12 @@ namespace Home
                     MessageBox.Show("Моля, изберете роля!");
                     this.Show();
                 }
-                
+
                 else
                 {
                     if (comboBox1.SelectedItem.ToString() == "Администратор")
                     {
-                        
+
                         Form2 form2 = new Form2();
                         this.Hide();
                         form2.ShowDialog();
@@ -46,7 +46,7 @@ namespace Home
                     {
                         this.Hide();
                         Form3 form3 = new Form3();
-                        
+
                         form3.ShowDialog();
                         this.Show();
                     }
@@ -180,6 +180,11 @@ namespace Home
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             //Application.Exit();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

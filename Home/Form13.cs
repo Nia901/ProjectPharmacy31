@@ -28,11 +28,17 @@ namespace Home
                 int quantity = (int)numericUpDown1.Value;
                 await productController.ChanngeQuantity(name, brand, quantity);
                 MessageBox.Show("Успешно променихте количеството на продукта!");
+                DialogResult = DialogResult.OK;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Form13_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -34,7 +34,7 @@ namespace Controller
                 throw new ArgumentException("Моля, въведете коректно потрбителско име!");
             if (string.IsNullOrWhiteSpace(description))
                 throw new ArgumentException("Моля, въведете коректно запитване!");
-            Customer c = await context.Customers.FirstOrDefaultAsync(x => x.Email == username);
+            Customer c = await context.Customers.FirstOrDefaultAsync(x => x.Username == username);
                 if(c==null)
                 throw new ArgumentException("Клиент с такъв имейл не съществува!");
             Specialists s = await context.Spetialists.FirstOrDefaultAsync(x => x.FirstName == firstName && x.LastName==lastName);
@@ -52,11 +52,11 @@ namespace Controller
         }
         public async Task<List<Questions>> GetAllBySpec(string username,string password)
         {
-            return await context.Questions.Where(x=>x.Specialist.Username==username&&x.Specialist.Password==password).ToListAsync();
+            return await context.Questions.Include(x => x.Customer).Include(x => x.Specialist).Where(x=>x.Specialist.Username==username&&x.Specialist.Password==password).ToListAsync();
         }
         public async Task<List<Questions>> GetAllByCustomer(string username, string password)
         {
-            return await context.Questions.Where(x => x.Specialist.Username == username && x.Specialist.Password == password).ToListAsync();
+            return await context.Questions.Include(x=>x.Customer).Include(x=>x.Specialist).Where(x => x.Customer.Username == username && x.Customer.Password == password).ToListAsync();
         }
     }
 }

@@ -26,6 +26,7 @@ namespace Home
                 TabPagess.Add((TabPage)item);
             }
             tabControl1.TabPages.Clear();
+            this.FormBorderStyle = FormBorderStyle.Sizable;
         }
         public List<TabPage> TabPagess { get; set; } = new List<TabPage>();
         private void button1_Click(object sender, EventArgs e)
@@ -42,6 +43,7 @@ namespace Home
             button5.FlatAppearance.BorderSize = 0;
             button6.FlatAppearance.BorderSize = 0;
             button7.FlatAppearance.BorderSize = 0;
+            this.FormBorderStyle=FormBorderStyle.Sizable;
 
         }
 
@@ -125,33 +127,38 @@ namespace Home
             }
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private async void button13_Click(object sender, EventArgs e)
         {
             dataGridView3.DataSource = null;
             dataGridView3.Visible = true;
-            dataGridView3.DataSource = productController.GetAll();
+            dataGridView3.DataSource = await productController.GetAll();
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
+            Form13 form13 = new Form13();
+            this.Hide();
+            form13.ShowDialog();
+            this.Show();
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private async void button15_Click(object sender, EventArgs e)
         {
             dataGridView4.DataSource = null;
-            dataGridView4.DataSource = orderController.GetAll();
+            dataGridView4.DataSource = await orderController.GetAll();
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private async void button16_Click(object sender, EventArgs e)
         {
             dataGridView5.DataSource = null;
-            dataGridView5.DataSource = specialistController.GetAll();
+            dataGridView5.DataSource = await specialistController.GetAll();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form10 form10 = new Form10();
+            form10.ShowDialog();
             this.Show();
             DialogResult = DialogResult.OK;
         }
@@ -166,7 +173,20 @@ namespace Home
             this.Hide();
             Form9 form9 = new Form9();
             form9.ShowDialog();
-                this.Show();
+            this.Show();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Form8 form8 = new Form8(false);
+            this.Hide();
+            form8.ShowDialog();
+            this.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

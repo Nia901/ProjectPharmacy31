@@ -19,10 +19,30 @@ namespace Home
         public Form11(string username)
         {
             InitializeComponent();
-            comboBox1.DataSource = null;
-            comboBox1.DataSource = productController.GetAll();
-            comboBox1.DisplayMember = "Name";
             Username = username;
+            this.Load += Form11_Load;
+        }
+        private async void Form11_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                comboBox1.Enabled = false;
+
+                var products = await productController.GetAll();
+
+                comboBox1.DataSource = null;
+                comboBox1.DataSource = products;
+                comboBox1.DisplayMember = "Name";
+                comboBox1.ValueMember = "Id";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Failed to load products: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                comboBox1.Enabled = true;
+            }
         }
         public string Username { get; set; }
         private async void button1_Click(object sender, EventArgs e)
@@ -54,6 +74,11 @@ namespace Home
         private void Form11_FormClosed(object sender, FormClosedEventArgs e)
         {
             //Application.Exit();
+        }
+
+        private void Form11_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
