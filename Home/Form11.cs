@@ -49,6 +49,8 @@ namespace Home
         {
             try
             {
+                if (numericUpDown1.Value == 0)
+                    throw new ArgumentException("Моля, въведете количество!");
                 Product p = comboBox1.SelectedItem as Product;
                 int quantity = (int)numericUpDown1.Value;
                 await orderController.CreateOrder(Username, p.Name, DateTime.Now, quantity);

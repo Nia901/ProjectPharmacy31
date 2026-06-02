@@ -1,0 +1,26 @@
+﻿[
+  {
+    "username": "Mariya1234",
+    "email": "mimi@dhfvb.dfvg",
+    "password": "123",
+    "firstname": "Mariya",
+    "lastname": "Smith",
+    "role": "admin"
+  },
+  {
+    "username": "Pepi1234",
+    "email": "dfgfd@rg.dgd",
+    "password": "123",
+    "firstname": "Petra",
+    "lastname": "Aleksandrova",
+    "role": "admin"
+  },
+  {
+    "username": "Daniela123",
+    "email": "rgrd@reg.fbfg",
+    "password": "123",
+    "firstname": "Daniela",
+    "lastname": "Shishkova",
+    "role": "admin"
+  }
+]

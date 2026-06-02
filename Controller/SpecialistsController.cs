@@ -27,7 +27,13 @@ namespace Controller
         }
         public async Task CreateSpecialist(string firstName,string lastName, ProfessionalFields proField,string username,string password)
         {
-            if(string.IsNullOrWhiteSpace(firstName))
+            if ((await context.Customers.AnyAsync(x => x.Username == username)))
+                throw new ArgumentException("Такъв потребител вече съществува!");
+            if ((await context.Admins.AnyAsync(x => x.Username == username)))
+                throw new ArgumentException("Такъв потребител вече съществува!");
+            if ((await context.Spetialists.AnyAsync(x => x.Username == username)))
+                throw new ArgumentException("Такъв потребител вече съществува!");
+            if (string.IsNullOrWhiteSpace(firstName))
                 throw new ArgumentException("Некоректно изписано първо име!");
             if (string.IsNullOrWhiteSpace(lastName))
                 throw new ArgumentException("Некоректно изписано фамилно име!");

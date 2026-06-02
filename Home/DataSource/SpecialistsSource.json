@@ -1,0 +1,26 @@
+﻿[
+  {
+    "firstName": "Никола",
+    "lastName": "Николов",
+    "proField": "Dermatologist",
+    "role": "Specialist",
+    "username": "Niki1",
+    "password": "123"
+  },
+  {
+    "firstName": "Мони",
+    "lastName": "Николов",
+    "proField": "Pediatrician",
+    "role": "Specialist",
+    "username": "Moni1",
+    "password": "123"
+  },
+  {
+    "firstName": "Боян",
+    "lastName": "Иванов",
+    "proField": "Dermatologist",
+    "role": "Specialist",
+    "username": "Bobi1",
+    "password": "123"
+  }
+]

@@ -135,6 +135,7 @@
             Controls.Add(label1);
             Font = new Font("Sitka Banner Semibold", 13.7999992F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             ForeColor = SystemColors.InfoText;
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 5, 4, 5);
             Name = "Form12";
             Text = "Questions";

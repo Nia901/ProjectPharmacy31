@@ -1,5 +1,8 @@
 ﻿using Controller;
+using Data;
 using Data.Entities;
+using Microsoft.VisualBasic.ApplicationServices;
+using Newtonsoft.Json;
 
 namespace Home
 {
@@ -16,6 +19,7 @@ namespace Home
             comboBox1.Items.Add("Специалист");
         }
         public User1 CurrentUser { get; set; }
+        public static bool WasPessed { get; set; } = false;
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -185,6 +189,31 @@ namespace Home
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (WasPessed)
+                MessageBox.Show("Записите са вече въведени!");
+            else
+            {
+                string json = File.ReadAllText("DataSource/AdminsSource.json");
+                string json1 = File.ReadAllText("DataSource/CustomersSource.json");
+                string json2 = File.ReadAllText("DataSource/ProductsSource.json");
+                string json3 = File.ReadAllText("DataSource/SpecialistsSource.json");
+                var users = JsonConvert.DeserializeObject<List<Admin>>(json);
+                var users1 = JsonConvert.DeserializeObject<List<Customer>>(json1);
+                var users2 = JsonConvert.DeserializeObject<List<Product>>(json2);
+                var users3 = JsonConvert.DeserializeObject<List<Specialists>>(json3);
+                PharmecyContext db = new PharmecyContext();
+                db.Admins.AddRange(users);
+                db.Customers.AddRange(users1);
+                db.Products.AddRange(users2);
+                db.Spetialists.AddRange(users3);
+                db.SaveChanges();
+                MessageBox.Show("Бяха въведени записи в таблиците!");
+            }
+           
         }
     }
 }

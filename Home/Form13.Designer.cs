@@ -122,6 +122,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Font = new Font("Sitka Banner Semibold", 13.7999992F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 5, 4, 5);
             Name = "Form13";
             Text = "Add Quantity";

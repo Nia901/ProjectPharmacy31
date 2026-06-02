@@ -38,16 +38,18 @@ namespace Home
                     await customerController.CreateCustomer(username,password, email, age);
                 MessageBox.Show("Успешна регистрация!");
                         DialogResult = DialogResult.OK;
-            }
+                }
                 catch (Exception ex)
                 {
-                this.Hide();
-                MessageBox.Show(ex.Message);
-                this.Show();
+                    this.Hide();
+                    MessageBox.Show(ex.Message);
+                    this.Show();
+                }
             }
-        }
             textBox1.Clear();
             textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)

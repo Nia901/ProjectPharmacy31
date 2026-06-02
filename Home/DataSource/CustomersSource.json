@@ -1,0 +1,23 @@
+﻿[
+  {
+    "username": "Ivan1234",
+    "password": "123",
+    "email": "i@dkfv.gfbf",
+    "age": 19,
+    "role": "customer"
+  },
+  {
+    "username": "Kaloyan123",
+    "password": "123",
+    "email": "efe@rgvr.fb",
+    "age": 20,
+    "role": "customer"
+  },
+  {
+    "username": "Ani1234",
+    "password": "123",
+    "email": "ani@sdf.sdef",
+    "age": 20,
+    "role": "customer"
+  }
+]

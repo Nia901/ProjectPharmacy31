@@ -1,4 +1,5 @@
 ﻿using Controller;
+using Data.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -145,9 +146,32 @@ namespace Home
         private async void button15_Click(object sender, EventArgs e)
         {
             dataGridView4.DataSource = null;
-            dataGridView4.DataSource = await orderController.GetAll();
+            dataGridView4.DataSource = await orderController.GetAll(); 
+            dataGridView4.CellFormatting += dataGridView4_CellFormatting;
+            dataGridView4.CellFormatting += dataGridView4_CellFormatting2;
         }
-
+        private void dataGridView4_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridView4.Columns[e.ColumnIndex].Name == "Customer" && e.Value != null)
+            {
+                if (e.Value is Customer categoryObject)
+                {
+                    e.Value = categoryObject.Username;
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+        private void dataGridView4_CellFormatting2(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridView4.Columns[e.ColumnIndex].Name == "Product" && e.Value != null)
+            {
+                if (e.Value is Product categoryObject)
+                {
+                    e.Value = categoryObject.Name;
+                    e.FormattingApplied = true;
+                }
+            }
+        }
         private async void button16_Click(object sender, EventArgs e)
         {
             dataGridView5.DataSource = null;

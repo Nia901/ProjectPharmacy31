@@ -28,7 +28,15 @@ namespace Controller
         }
         public async Task CreateAdmin(string firstName,string lastName,string email,string password,string username)
         {
-            if(await context.Admins.AnyAsync(x=>x.Email==email))
+            if ((await context.Customers.AnyAsync(x => x.Username == username)))
+                throw new ArgumentException("Такъв потребител вече съществува!");
+            if ((await context.Admins.AnyAsync(x => x.Username == username)))
+                throw new ArgumentException("Такъв потребител вече съществува!");
+            if ((await context.Spetialists.AnyAsync(x => x.Username == username)))
+                throw new ArgumentException("Такъв потребител вече съществува!");
+            if (await context.Admins.AnyAsync(x=>x.Email==email))
+                throw new ArgumentException("Такъв имейл вече съществува!");
+            if (await context.Customers.AnyAsync(x => x.Email == email))
                 throw new ArgumentException("Такъв имейл вече съществува!");
             if (string.IsNullOrWhiteSpace(firstName))
                 throw new ArgumentException("Моля, въведете коректно първо име!");

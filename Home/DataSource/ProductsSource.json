@@ -1,0 +1,26 @@
+﻿[
+  {
+    "name": "Сироп за кашлица",
+    "brand": "Сиропи1",
+    "category": "Children",
+    "productType": "Лекарство",
+    "price":7,
+    "quantity": 10
+  },
+  {
+    "name": "Спрей за нос",
+    "brand": "Спрей1",
+    "category": "Men",
+    "productType": "Лекарство",
+    "price": 10,
+    "quantity": 12
+  },
+  {
+    "name": "Крем за лице",
+    "brand": "Кремове1",
+    "category": "Women",
+    "productType": "Козметика",
+    "price": 5,
+    "quantity": 10
+  }
+]

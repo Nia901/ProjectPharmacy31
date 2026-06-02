@@ -31,9 +31,17 @@ namespace Controller
         }
         public async Task CreateCustomer(string username,string password,string email,int age)
         {
-           Customer customer = await context.Customers.FirstOrDefaultAsync(x => x.Email == email);
-            if (customer != null)
-                throw new ArgumentException("Такъв имейл вече съществува!");
+           
+            if ((await context.Customers.AnyAsync(x=>x.Username==username)))
+                throw new ArgumentException("Такъв потребител вече съществува!");
+            if ((await context.Admins.AnyAsync(x => x.Username == username)))
+                throw new ArgumentException("Такъв потребител вече съществува!");
+            if ((await context.Spetialists.AnyAsync(x => x.Username == username)))
+                throw new ArgumentException("Такъв потребител вече съществува!");
+            if ((await context.Customers.AnyAsync(x => x.Email == email)))
+                throw new ArgumentException("Такъв потребител вече съществува!");
+            if ((await context.Admins.AnyAsync(x => x.Email == email)))
+                throw new ArgumentException("Такъв потребител вече съществува!");
             if (string.IsNullOrWhiteSpace(username))
                 throw new ArgumentException("Моля, въведете коректно име!");
             if (string.IsNullOrWhiteSpace(email))
