@@ -34,10 +34,9 @@
             label2 = new Label();
             button1 = new Button();
             button2 = new Button();
-            dataGridView1 = new DataGridView();
             button3 = new Button();
             groupBox1 = new GroupBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            textBox3 = new TextBox();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -103,18 +102,6 @@
             button2.Visible = false;
             button2.Click += button2_Click;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(36, 383);
-            dataGridView1.Margin = new Padding(4, 5, 4, 5);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1130, 127);
-            dataGridView1.TabIndex = 6;
-            dataGridView1.Visible = false;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
             // button3
             // 
             button3.Location = new Point(518, 634);
@@ -139,6 +126,14 @@
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(108, 462);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(973, 36);
+            textBox3.TabIndex = 4;
+            textBox3.Visible = false;
+            // 
             // Form8
             // 
             AutoScaleDimensions = new SizeF(12F, 33F);
@@ -147,9 +142,9 @@
             BackgroundImage = Properties.Resources.stethoscope_placed_on_a_blue_surface_a_stethoscope_rests_on_a_blue_surface_showcasing_its_metallic_components_and_soft_tubing_ideal_for_medical_use_photo;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1200, 742);
+            Controls.Add(textBox3);
             Controls.Add(groupBox1);
             Controls.Add(button3);
-            Controls.Add(dataGridView1);
             Controls.Add(button2);
             Controls.Add(button1);
             Font = new Font("Sitka Banner Semibold", 13.7999992F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
@@ -159,10 +154,10 @@
             Text = "Search Customer";
             FormClosed += Form8_FormClosed;
             Load += Form8_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -173,8 +168,8 @@
         private Label label2;
         private Button button1;
         private Button button2;
-        private DataGridView dataGridView1;
         private Button button3;
         private GroupBox groupBox1;
+        private TextBox textBox3;
     }
 }

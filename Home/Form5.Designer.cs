@@ -186,7 +186,7 @@
             tabPage1.Location = new Point(4, 42);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(738, 533);
+            tabPage1.Size = new Size(733, 533);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Admins";
             tabPage1.UseVisualStyleBackColor = true;
@@ -221,16 +221,16 @@
             tabPage2.Location = new Point(4, 42);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(738, 533);
+            tabPage2.Size = new Size(733, 533);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Customers";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
-            button11.Location = new Point(515, 397);
+            button11.Location = new Point(516, 397);
             button11.Name = "button11";
-            button11.Size = new Size(185, 43);
+            button11.Size = new Size(185, 75);
             button11.TabIndex = 3;
             button11.Text = "Изтрий клиент";
             button11.UseVisualStyleBackColor = true;
@@ -240,7 +240,7 @@
             // 
             button10.Location = new Point(293, 397);
             button10.Name = "button10";
-            button10.Size = new Size(185, 43);
+            button10.Size = new Size(185, 75);
             button10.TabIndex = 2;
             button10.Text = "Търси клиент по имейл";
             button10.UseVisualStyleBackColor = true;
@@ -250,7 +250,7 @@
             // 
             button9.Location = new Point(61, 397);
             button9.Name = "button9";
-            button9.Size = new Size(185, 43);
+            button9.Size = new Size(185, 75);
             button9.TabIndex = 1;
             button9.Text = "Покажи всички клиенти";
             button9.UseVisualStyleBackColor = true;
@@ -275,7 +275,7 @@
             tabPage3.Location = new Point(4, 42);
             tabPage3.Name = "tabPage3";
             tabPage3.Padding = new Padding(3);
-            tabPage3.Size = new Size(738, 533);
+            tabPage3.Size = new Size(733, 533);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Products";
             tabPage3.UseVisualStyleBackColor = true;
@@ -327,7 +327,7 @@
             tabPage4.Location = new Point(4, 42);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(738, 533);
+            tabPage4.Size = new Size(733, 533);
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Orders";
             tabPage4.UseVisualStyleBackColor = true;

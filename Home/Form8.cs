@@ -37,9 +37,10 @@ namespace Home
             try
             {
 
-                dataGridView1.Visible = true;
-                dataGridView1.DataSource = await customerController.GetByEmail(email);
-                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                textBox3.Visible = true;
+                Customer customer = await customerController.GetByEmail(email);
+                textBox3.Text = $"{customer.Id}. {customer.Username} ({customer.Password}) - email: {customer.Email} - age: {customer.Age}";
+                //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex)
             {

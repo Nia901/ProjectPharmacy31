@@ -1,6 +1,6 @@
 ﻿{
   "ConnectionStrings": {
-    "DefaultConnection": "Server=STUDENT18;Database=PharmacyDB161;Trusted_Connection=True;TrustServerCertificate=True"
+    "DefaultConnection": "Server=DESKTOP-HMU1D02\\SQLEXPRESS;Database=PharmacyDB161;Trusted_Connection=True;TrustServerCertificate=True"
   }
     
 }

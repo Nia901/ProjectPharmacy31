@@ -27,7 +27,12 @@ namespace Controller
         }
         public async Task<Customer> GetByEmail(string email)
         {
-            return await context.Customers.FirstOrDefaultAsync(x=>x.Email==email);
+            if(string.IsNullOrWhiteSpace(email))
+                throw new ArgumentException("Моля, въведете коректен имейл!");
+            Customer customer = await context.Customers.FirstOrDefaultAsync(x => x.Email == email);
+            if (customer==null)
+                throw new ArgumentException("Моля, въведете коректен имейл!");
+            return customer;
         }
         public async Task CreateCustomer(string username,string password,string email,int age)
         {
