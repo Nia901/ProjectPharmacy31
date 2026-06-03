@@ -44,7 +44,7 @@ namespace Home
             button5.FlatAppearance.BorderSize = 0;
             button6.FlatAppearance.BorderSize = 0;
             button7.FlatAppearance.BorderSize = 0;
-            this.FormBorderStyle=FormBorderStyle.Sizable;
+            this.FormBorderStyle = FormBorderStyle.Sizable;
 
         }
 
@@ -146,7 +146,7 @@ namespace Home
         private async void button15_Click(object sender, EventArgs e)
         {
             dataGridView4.DataSource = null;
-            dataGridView4.DataSource = await orderController.GetAll(); 
+            dataGridView4.DataSource = await orderController.GetAll();
             dataGridView4.CellFormatting += dataGridView4_CellFormatting;
             dataGridView4.CellFormatting += dataGridView4_CellFormatting2;
         }
@@ -209,6 +209,11 @@ namespace Home
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
