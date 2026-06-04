@@ -35,6 +35,7 @@
             button1 = new Button();
             label3 = new Label();
             textBox2 = new TextBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
@@ -106,6 +107,16 @@
             textBox2.Size = new Size(460, 36);
             textBox2.TabIndex = 6;
             // 
+            // button2
+            // 
+            button2.Location = new Point(746, 472);
+            button2.Name = "button2";
+            button2.Size = new Size(214, 96);
+            button2.TabIndex = 7;
+            button2.Text = "Затвори";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form13
             // 
             AutoScaleDimensions = new SizeF(12F, 33F);
@@ -114,6 +125,7 @@
             BackgroundImage = Properties.Resources.stethoscope_placed_on_a_blue_surface_a_stethoscope_rests_on_a_blue_surface_showcasing_its_metallic_components_and_soft_tubing_ideal_for_medical_use_photo1;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1200, 742);
+            Controls.Add(button2);
             Controls.Add(textBox2);
             Controls.Add(label3);
             Controls.Add(button1);
@@ -141,5 +153,6 @@
         private Button button1;
         private Label label3;
         private TextBox textBox2;
+        private Button button2;
     }
 }

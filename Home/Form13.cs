@@ -40,5 +40,10 @@ namespace Home
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult=DialogResult.OK;
+        }
     }
 }

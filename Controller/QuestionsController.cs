@@ -26,6 +26,8 @@ namespace Controller
         }
         public async Task CreateQuestions(string username,string firstName,string lastName,string description,DateTime consultationDate)
         {
+            if(consultationDate<DateTime.Now)
+                throw new ArgumentException("Моля, въведете коректна дата за консултация!");
             if (string.IsNullOrWhiteSpace(firstName))
                 throw new ArgumentException("Моля, въведете коректно първо име!");
             if (string.IsNullOrWhiteSpace(lastName))
